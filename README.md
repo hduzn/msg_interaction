@@ -1,0 +1,2 @@
+# msg_interaction
+基于Flask框架使用MQTT进行消息互动
