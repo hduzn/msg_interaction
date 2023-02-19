@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ room }}-登录</title>
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+</head>
+<body>
+  <div class="container-sm">
+    <div class="row justify-content-center align-items-center" style="margin-top: 6rem!important;">
+        <div class="col-md-6">
+            <div class="border border-primary rounded-3 p-3 bg-light">
+                <form method="post" action="{{ url_for('submit_pc_id') }}">
+                    <h1 class="text-center mb-5 my-4">登录</h1>
+                    <div class="input-group mb-3">
+                        <label class="input-group-text" id="basic-addon1">座位号：</label>
+                        <div class="col-auto">
+                            <input type="text" class="form-control" name="computer_id" placeholder="请输入座位号" aria-label="请输入座位号" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <input type="hidden" name="room" value="{{ room }}">
+                    <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mt-3" style="width: 40%;" id="button-login">登录</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    </div>
+</body>
+</html>
